@@ -7,7 +7,7 @@
                     </div>
                     <div class="col-8">
                         <div class="container bg-warning p-2 text-center float-end" style="border-radius: 2rem; max-width: 9rem;">
-                            <span class="text-white fs-5">{{movie.rating}}/10 <mat-icon class="fs-4">star</mat-icon></span>
+                            <span class="align-middle text-white fs-5">{{movie.rating}}/10 <mat-icon class="align-middle">star</mat-icon></span>
                         </div>
                         <h3 class="fw-bold fs-5">{{movie.title}}</h3>
                         <p class="fs-6 text-muted">{{movie.genre}}</p>
@@ -16,10 +16,11 @@
                         <p><strong>Director: </strong>{{movie.director}}</p>
                     </div>
                     <div class="col-12">
+                    <div class="my-3"></div>
                         <div class="d-flex justify-content-center" style="transform: translate(0,-1rem);">
-                            <div class="container bg-dark p-3 text-center float-end" style="border-radius: 2rem">
-                                <span class="text-white fs-4 fw-normal">WATCH MOVIE <mat-icon class="fs-3">local_movies</mat-icon></span>
-                            </div>
+                            <a [href]="'/movie/'+movie.id" class="container btn btn-dark p-3 text-center float-end" style="border-radius: 2rem">
+                                <span class="text-white fs-4 fw-normal">WATCH MOVIE <mat-icon class="align-middle">local_movies</mat-icon></span>
+                            </a>
                         </div>
                     </div>
                 </div>

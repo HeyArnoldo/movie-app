@@ -1,0 +1,37 @@
+<!-- <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="shadow text-center bg-white p-5" style="border-radius: 2rem;">  
+        <span class="display-5">{{movie.title}}</span>
+        <p class="mb-0">Sorry :(</p>
+        <p>This page is current in development</p>
+        <a routerLink="/" class="btn btn-primary">Go to home</a>
+    </div>
+</div> -->
+<div class="container pt-5">
+    <div class="row g-5">
+        <div class="col-xl-8">
+            <div class=" shadow p-5 container bg-white" style="border-radius: 3rem;">
+                <div class="row g-3">
+                    <div class="col-lg-7 p-3">
+                        <span class="display-5">{{movie.title}}</span>
+                        <p class="fs-6 text-muted">{{movie.genre}}</p>
+                        <p class="">{{movie.description}}</p>
+                        <p><strong>Año: </strong>{{movie.year}}</p>
+                        <p><strong>Director: </strong>{{movie.director}}</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <img class="shadow mx-auto " style="width:100%; border-radius: 2rem;" [src]="movie.image" alt="movie.title">
+                    </div>
+                    <div class="col-12">
+                        <p><strong>Trailer: </strong></p>
+                        <div class="d-flex felx-column w-100 h-100 align-items-center justify-content-center">
+                            <youtube-player [videoId]="movie.trailer.slice(-11)"></youtube-player>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <app-movie-list></app-movie-list>
+        </div>
+    </div>
+</div>
