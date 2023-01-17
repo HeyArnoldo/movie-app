@@ -1,0 +1,28 @@
+<div class="row g-3">
+        <div *ngFor="let movie of movies" class="col-xl-6">
+            <div class="shadow container p-4 bg-white mt-3 pb-2" style="border-radius:2rem ">
+                <div class="row">
+                    <div class="col-4 d-flex justify-content-center flex-column">
+                        <img class="shadow mx-auto " style="width:100%; border-radius: 2rem; transform:translate(0, -2.5rem);" [src]="movie.image" alt="movie.title">
+                    </div>
+                    <div class="col-8">
+                        <div class="container bg-warning p-2 text-center float-end" style="border-radius: 2rem; max-width: 9rem;">
+                            <span class="text-white fs-5">{{movie.rating}}/10 <mat-icon class="fs-4">star</mat-icon></span>
+                        </div>
+                        <h3 class="fw-bold fs-5">{{movie.title}}</h3>
+                        <p class="fs-6 text-muted">{{movie.genre}}</p>
+                        <p>{{movie.description}}</p>
+                        <p><strong>Año: </strong>{{movie.year}}</p>
+                        <p><strong>Director: </strong>{{movie.director}}</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex justify-content-center" style="transform: translate(0,-1rem);">
+                            <div class="container bg-dark p-3 text-center float-end" style="border-radius: 2rem">
+                                <span class="text-white fs-4 fw-normal">WATCH MOVIE <mat-icon class="fs-3">local_movies</mat-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
