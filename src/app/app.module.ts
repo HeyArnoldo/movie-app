@@ -4,8 +4,6 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon'
 import {MatCardModule} from '@angular/material/card';
 import { RouterModule } from '@angular/router';
-import { YouTubePlayerModule } from '@angular/youtube-player';
-
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -40,7 +38,6 @@ import { MovieIdComponent } from './components/movie-id/movie-id.component';
     MatCardModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    YouTubePlayerModule,
     RouterModule.forRoot([
       {path: '', component: MoviePageComponent},
       {path: 'coming-soon', component: ComingSoonComponent},

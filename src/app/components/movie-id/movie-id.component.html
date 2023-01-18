@@ -24,7 +24,7 @@
                     <div class="col-12">
                         <p><strong>Trailer: </strong></p>
                         <div class="d-flex felx-column w-100 h-100 align-items-center justify-content-center">
-                            <youtube-player [videoId]="movie.trailer.slice(-11)"></youtube-player>
+                            <iframe width="560" height="315" [src]="safeURL(movie.trailer)" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
