@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "aws": "ng build && aws s3 sync dist/movie-app s3://heldencraft.tk"
   },
   "private": true,
   "dependencies": {

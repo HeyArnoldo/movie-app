@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MoviesService {
-  url:string = 'http://localhost:5000/api/movies/';
+  url:string = 'https://api.heldencraft.tk/movies';
   constructor(private http: HttpClient) {}
   getMovies(): Observable<Movies[]> {
     return this.http.get<Movies[]>(this.url);
   }
   getMovie(id: string): Observable<Movies> {
-    return this.http.get<Movies>(this.url + id);
+    return this.http.get<Movies>(`${this.url}/${id}`);
   }
 }

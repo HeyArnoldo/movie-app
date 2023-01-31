@@ -1,12 +1,4 @@
-<!-- <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
-    <div class="shadow text-center bg-white p-5" style="border-radius: 2rem;">  
-        <span class="display-5">{{movie.title}}</span>
-        <p class="mb-0">Sorry :(</p>
-        <p>This page is current in development</p>
-        <a routerLink="/" class="btn btn-primary">Go to home</a>
-    </div>
-</div> -->
-<div class="container pt-5">
+<div class="container py-5">
     <div class="row g-3">
         <div class="col-xl-8">
             <div class=" shadow p-5 container bg-white" style="border-radius: 3rem;">
@@ -31,7 +23,10 @@
             </div>
         </div>
         <div class="col-xl-4">
-            <app-movie-list [cardSize]="'col-12'"></app-movie-list>
+            <div class="container bg-warning p-4 text-center mb-3"  style="border-radius: 2rem;">
+                <span class="fs-3 fw-bold">MORE</span>
+            </div>
+            <app-movie-list [cardSize]="'col-12'" [movies]="moviesData"></app-movie-list>
         </div>
     </div>
 </div>
